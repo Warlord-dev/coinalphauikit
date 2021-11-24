@@ -124,7 +124,13 @@ const Menu: React.FC<NavProps> = ({
   const subLinksMobileOnly = subLinks?.filter((subLink) => subLink.isMobileOnly);
 
   return (
-    <div></div>
+    <Wrapper>
+      <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
+        <Inner isPushed={false} showMenu={showMenu}>
+          {children}
+        </Inner>
+      </BodyWrapper>
+    </Wrapper>
   );
 };
 

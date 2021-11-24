@@ -2433,7 +2433,7 @@ var StyledWrapper = styled__default['default'].div(templateObject_1$F || (templa
     var $width = _a.$width, $height = _a.$height;
     return ($height / $width) * 100;
 }, styledSystem.space);
-var Wrapper$2 = React.forwardRef(function (_a, ref) {
+var Wrapper$3 = React.forwardRef(function (_a, ref) {
     var width = _a.width, height = _a.height, props = __rest(_a, ["width", "height"]);
     return React__default['default'].createElement(StyledWrapper, __assign({ ref: ref, "$width": width, "$height": height }, props));
 });
@@ -2442,7 +2442,7 @@ var templateObject_1$F;
 var Placeholder = styled__default['default'].div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n"], ["\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n"])));
 var templateObject_1$E;
 
-var StyledBackgroundImage = styled__default['default'](Wrapper$2)(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  background-repeat: no-repeat;\n  background-size: contain;\n"], ["\n  background-repeat: no-repeat;\n  background-size: contain;\n"])));
+var StyledBackgroundImage = styled__default['default'](Wrapper$3)(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  background-repeat: no-repeat;\n  background-size: contain;\n"], ["\n  background-repeat: no-repeat;\n  background-size: contain;\n"])));
 var BackgroundImage = function (_a) {
     var loadingPlaceholder = _a.loadingPlaceholder, src = _a.src, width = _a.width, height = _a.height, props = __rest(_a, ["loadingPlaceholder", "src", "width", "height"]);
     var _b = React.useState(false), isLoaded = _b[0], setIsLoaded = _b[1];
@@ -2506,7 +2506,7 @@ var Image = function (_a) {
             }
         };
     }, [src]);
-    return (React__default['default'].createElement(Wrapper$2, __assign({ ref: imgRef, height: height, width: width }, props), isLoaded ? React__default['default'].createElement(StyledImage, { src: src, alt: alt }) : React__default['default'].createElement(Placeholder, null)));
+    return (React__default['default'].createElement(Wrapper$3, __assign({ ref: imgRef, height: height, width: width }, props), isLoaded ? React__default['default'].createElement(StyledImage, { src: src, alt: alt }) : React__default['default'].createElement(Placeholder, null)));
 };
 var templateObject_1$C;
 
@@ -2563,7 +2563,7 @@ var templateObject_1$A, templateObject_2$k;
 var TokenPairImage = function (_a) {
     var primarySrc = _a.primarySrc, secondarySrc = _a.secondarySrc, width = _a.width, height = _a.height, _b = _a.variant, variant = _b === void 0 ? variants$4.DEFAULT : _b, _c = _a.primaryImageProps, primaryImageProps = _c === void 0 ? {} : _c, _d = _a.secondaryImageProps, secondaryImageProps = _d === void 0 ? {} : _d, props = __rest(_a, ["primarySrc", "secondarySrc", "width", "height", "variant", "primaryImageProps", "secondaryImageProps"]);
     var secondaryImageSize = Math.floor(width / 2);
-    return (React__default['default'].createElement(Wrapper$2, __assign({ position: "relative", width: width, height: height }, props),
+    return (React__default['default'].createElement(Wrapper$3, __assign({ position: "relative", width: width, height: height }, props),
         React__default['default'].createElement(StyledPrimaryImage, __assign({ variant: variant, src: primarySrc, width: width, height: height }, primaryImageProps)),
         React__default['default'].createElement(StyledSecondaryImage, __assign({ variant: variant, src: secondarySrc, width: secondaryImageSize, height: secondaryImageSize }, secondaryImageProps))));
 };
@@ -3223,7 +3223,7 @@ var ChildrenRightWrapper = styled__default['default'](ChildrenWrapper)(templateO
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
-var Wrapper$1 = styled__default['default'].div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
+var Wrapper$2 = styled__default['default'].div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
 var StepNumber = styled__default['default'].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 5;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 5;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "current" ? "secondary" : "invertedContrast"];
@@ -3248,7 +3248,7 @@ var Step = function (_a) {
     var isLast = index === numberOfSteps - 1;
     return (React__default['default'].createElement(StyledStep, { mb: index < numberOfSteps - 1 ? "16px" : 0 },
         React__default['default'].createElement(ChildrenLeftWrapper, { isVisible: !isIndexPair }, children),
-        React__default['default'].createElement(Wrapper$1, null,
+        React__default['default'].createElement(Wrapper$2, null,
             React__default['default'].createElement(StepNumber, { status: statusFirstPart }, index + 1),
             React__default['default'].createElement(Connector, { "$isFirstStep": isFirst, "$isLastStep": isLast, status: statusFirstPart, "$isFirstPart": true }),
             !isFirst && !isLast && React__default['default'].createElement(Connector, { "$isFirstStep": isFirst, "$isLastStep": isLast, status: statusSecondPart })),
@@ -3858,18 +3858,18 @@ var ThemeSwitcher = function (_a) {
 };
 var ThemeSwitcher$1 = React__default['default'].memo(ThemeSwitcher, function (prev, next) { return prev.isDark === next.isDark; });
 
-var Wrapper = styled__default['default'](Flex)(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  border-bottom: 2px solid ", ";\n  overflow-x: scroll;\n\n  ::-webkit-scrollbar {\n    display: none;\n  }\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n"], ["\n  border-bottom: 2px solid ", ";\n  overflow-x: scroll;\n\n  ::-webkit-scrollbar {\n    display: none;\n  }\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n"])), function (_a) {
+var Wrapper$1 = styled__default['default'](Flex)(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  border-bottom: 2px solid ", ";\n  overflow-x: scroll;\n\n  ::-webkit-scrollbar {\n    display: none;\n  }\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n"], ["\n  border-bottom: 2px solid ", ";\n  overflow-x: scroll;\n\n  ::-webkit-scrollbar {\n    display: none;\n  }\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.textSubtle;
 });
-var Inner = styled__default['default'](Flex)(templateObject_2$7 || (templateObject_2$7 = __makeTemplateObject(["\n  justify-content: space-between;\n  flex-grow: 1;\n\n  & > button + button {\n    margin-left: 4px;\n  }\n\n  ", " {\n    flex-grow: 0;\n  }\n"], ["\n  justify-content: space-between;\n  flex-grow: 1;\n\n  & > button + button {\n    margin-left: 4px;\n  }\n\n  ", " {\n    flex-grow: 0;\n  }\n"])), function (_a) {
+var Inner$1 = styled__default['default'](Flex)(templateObject_2$7 || (templateObject_2$7 = __makeTemplateObject(["\n  justify-content: space-between;\n  flex-grow: 1;\n\n  & > button + button {\n    margin-left: 4px;\n  }\n\n  ", " {\n    flex-grow: 0;\n  }\n"], ["\n  justify-content: space-between;\n  flex-grow: 1;\n\n  & > button + button {\n    margin-left: 4px;\n  }\n\n  ", " {\n    flex-grow: 0;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
 var ButtonMenu = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, onItemClick = _a.onItemClick, children = _a.children;
-    return (React__default['default'].createElement(Wrapper, { p: ["0 4px", "0 16px"] },
-        React__default['default'].createElement(Inner, null, React.Children.map(children, function (child, index) {
+    return (React__default['default'].createElement(Wrapper$1, { p: ["0 4px", "0 16px"] },
+        React__default['default'].createElement(Inner$1, null, React.Children.map(children, function (child, index) {
             var isActive = activeIndex === index;
             return React.cloneElement(child, {
                 isActive: isActive,
@@ -4647,7 +4647,7 @@ var MENU_HEIGHT = 56;
 var TOP_BANNER_HEIGHT = 70;
 var TOP_BANNER_HEIGHT_MOBILE = 84;
 
-styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
+var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
@@ -4672,12 +4672,12 @@ styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTem
     var height = _a.height;
     return "".concat(height, "px");
 });
-styled__default['default'](Box)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-styled__default['default'].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
+var BodyWrapper = styled__default['default'](Box)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
+var Inner = styled__default['default'].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
 var Menu$1 = function (_a) {
-    _a.userMenu; var banner = _a.banner; _a.globalMenu; _a.isDark; _a.toggleTheme; _a.currentLang; _a.setLang; _a.cakePriceUsd; var links = _a.links, subLinks = _a.subLinks; _a.footerLinks; _a.activeItem; _a.activeSubItem; _a.langs; _a.buyCakeLabel; _a.children;
+    _a.userMenu; var banner = _a.banner; _a.globalMenu; _a.isDark; _a.toggleTheme; _a.currentLang; _a.setLang; _a.cakePriceUsd; var links = _a.links, subLinks = _a.subLinks; _a.footerLinks; _a.activeItem; _a.activeSubItem; _a.langs; _a.buyCakeLabel; var children = _a.children;
     var isMobile = useMatchBreakpoints().isMobile;
-    var _b = React.useState(true); _b[0]; var setShowMenu = _b[1];
+    var _b = React.useState(true), showMenu = _b[0], setShowMenu = _b[1];
     var refPrevOffset = React.useRef(window.pageYOffset);
     var topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
     var totalTopMenuHeight = banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
@@ -4713,7 +4713,9 @@ var Menu$1 = function (_a) {
     links.find(function (link) { return link.label === "Home"; });
     subLinks === null || subLinks === void 0 ? void 0 : subLinks.filter(function (subLink) { return !subLink.isMobileOnly; });
     subLinks === null || subLinks === void 0 ? void 0 : subLinks.filter(function (subLink) { return subLink.isMobileOnly; });
-    return (React__default['default'].createElement("div", null));
+    return (React__default['default'].createElement(Wrapper, null,
+        React__default['default'].createElement(BodyWrapper, { mt: !subLinks ? "".concat(totalTopMenuHeight + 1, "px") : "0" },
+            React__default['default'].createElement(Inner, { isPushed: false, showMenu: showMenu }, children))));
 };
 var templateObject_1$6, templateObject_2$3, templateObject_3$1, templateObject_4, templateObject_5, templateObject_6;
 
