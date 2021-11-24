@@ -125,33 +125,6 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
-        {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
-        <StyledNav>
-          <Flex>
-            <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-            {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
-          </Flex>
-          <Flex alignItems="center" height="100%">
-            {!isMobile && (
-              <Box mr="12px">
-                <CakePrice cakePriceUsd={cakePriceUsd} />
-              </Box>
-            )}
-            <Box mt="4px">
-              <LangSelector
-                currentLang={currentLang}
-                langs={langs}
-                setLang={setLang}
-                buttonScale="xs"
-                color="textSubtle"
-                hideLanguage
-              />
-            </Box>
-            {globalMenu} {userMenu}
-          </Flex>
-        </StyledNav>
-      </FixedContainer>
       {subLinks && (
         <Flex justifyContent="space-around">
           <SubMenuItems items={subLinksWithoutMobile} mt={`${totalTopMenuHeight + 1}px`} activeItem={activeSubItem} />
