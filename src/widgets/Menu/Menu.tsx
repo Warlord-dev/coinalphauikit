@@ -17,6 +17,7 @@ import LangSelector from "../../components/LangSelector/LangSelector";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  display: none;
 `;
 
 const StyledNav = styled.nav`
