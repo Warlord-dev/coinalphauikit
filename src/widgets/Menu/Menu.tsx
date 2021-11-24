@@ -127,8 +127,8 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
         <StyledNav>          
-          <Flex alignItems="right" height="100%">
-            {globalMenu} {userMenu}
+          <Flex alignItems="center" height="100%">
+            {userMenu}
           </Flex>
         </StyledNav>
       </FixedContainer>
@@ -137,7 +137,6 @@ const Menu: React.FC<NavProps> = ({
           {children}
         </Inner>
       </BodyWrapper>
-      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
     </Wrapper>
   );
 };
