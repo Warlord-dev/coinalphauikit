@@ -125,11 +125,20 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
+      <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
+        {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
+        <StyledNav>          
+          <Flex alignItems="center" height="100%">
+            {globalMenu} {userMenu}
+          </Flex>
+        </StyledNav>
+      </FixedContainer>
       <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
         </Inner>
       </BodyWrapper>
+      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
     </Wrapper>
   );
 };
