@@ -17,7 +17,6 @@ import LangSelector from "../../components/LangSelector/LangSelector";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  display: none;
 `;
 
 const StyledNav = styled.nav`
@@ -125,39 +124,7 @@ const Menu: React.FC<NavProps> = ({
   const subLinksMobileOnly = subLinks?.filter((subLink) => subLink.isMobileOnly);
 
   return (
-    <Wrapper>
-      {subLinks && (
-        <Flex justifyContent="space-around">
-          <SubMenuItems items={subLinksWithoutMobile} mt={`${totalTopMenuHeight + 1}px`} activeItem={activeSubItem} />
-
-          {subLinksMobileOnly?.length > 0 && (
-            <SubMenuItems
-              items={subLinksMobileOnly}
-              mt={`${totalTopMenuHeight + 1}px`}
-              activeItem={activeSubItem}
-              isMobileOnly
-            />
-          )}
-        </Flex>
-      )}
-      <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
-        <Inner isPushed={false} showMenu={showMenu}>
-          {children}
-          <Footer
-            items={footerLinks}
-            isDark={isDark}
-            toggleTheme={toggleTheme}
-            langs={langs}
-            setLang={setLang}
-            currentLang={currentLang}
-            cakePriceUsd={cakePriceUsd}
-            buyCakeLabel={buyCakeLabel}
-            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
-          />
-        </Inner>
-      </BodyWrapper>
-      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
-    </Wrapper>
+    <div></div>
   );
 };
 
