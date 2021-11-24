@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Warlord-dev/coinalpha-toolkit/tree/master/packages/pancake-uikit",
+  "repository": "https://github.com/Warlord-dev/coinalphaUiKit",
   "license": "MIT",
   "scripts": {
     "start": "yarn storybook",
